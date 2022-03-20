@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>L2M-UPEN</title>
+    </head>
+    <body class="container" style="max-width:920px">
+        <!-- Title -->
+        <div>
+            <div class="row mt-5 mb-5">
+                <div class="col text-center">
+                    <p class="h3 font-weight-normal">Uncertainty-driven Mapping and Navigation</p>
+                </div>
+            </div>
+
+            <!-- authors -->
+            <div class="col text-center h5 font-weight-bold mb-1">
+		    <a class="col-md-3 col-xs-7" href="https://ggeorgak11.github.io/"><span>Georgios Georgakis<sup>1</sup></span></a>
+            <a class="col-md-3 col-xs-7" href="https://bucherb.github.io/"><span>Bernadette Bucher<sup>1</sup></span></a>
+		    <a class="col-md-3 col-xs-7" href="https://sites.google.com/view/karlschmeckpeper"><span>Karl Schmeckpeper<sup>1</sup></span></a>
+            <a class="col-md-3 col-xs-7" href="https://www.linkedin.com/in/anton-arapin-9494b616b/"><span>Anton Arapin<sup>2</sup></span></a> <br>
+            <a class="col-md-3 col-xs-7" href=""><span>Siddharth Singh<sup>3</sup></span></a>
+            <a class="col-md-3 col-xs-7" href="https://nikolaimatni.github.io/"><span>Nikolai Matni<sup>1</sup></span></a>
+		    <a class="col-md-3 col-xs-7" href="https://www.cis.upenn.edu/~kostas"><span>Kostas Daniilidis<sup>1</sup></span></a>
+            </div>
+
+            <!-- affiliations -->
+            <div class='row text-center mt-3 mb-3' >
+                <a class="col-md-4" href="https://www.upenn.edu/"><span><sup>1</sup>University of Pennsylvania</span></a>
+                <a class="col-md-4" href="https://www.uchicago.edu/"><span><sup>2</sup>University of Chicago</span></a>
+                <a class="col-md-4" href="https://www.amazon.science/"><span><sup>3</sup>Amazon</span></a>
+            </div>
+            
+        </div>
+
+
+        <!-- Architecture, explaination -->
+        <div>
+            <hr>
+            <div class="row text-center">
+                <div class="col">
+                    <p class="h2">Overview</p>
+                </div>
+            </div>
+
+
+            <div class="col-md-12 col-sm-12 col-xs-12 align-middle mt-6">
+                    <p class="text-break">
+                        Operating in novel indoor scenes presents several challenges. First, unstructured environments are visually complex; 
+                        the agent needs to recognize multiple object categories from different viewpoints and under occlusions in addition 
+                        to parsing the structure of the scene to floor, side walls, and doors. Second, the agent needs to consider the spatial 
+                        complexity of unseen environments, in other words, the set of expected semantic configurations. We aim to address these 
+                        issues by learning how to predict semantic maps. Through this task a model can learn spatial associations between semantic 
+                        entities and use this information to reason beyond the field-of-view of the agent.
+                        Particularly, in this research thrust we hypothesize that learning semantic layout patterns of indoor scenes increases the 
+                        robustness of navigation agents towards the visual and layout complexity of previously unseen environments. We propose the 
+                        following: 1) a novel framework for hallucinating occupancy and semantic regions beyond the field-of-view of the agent, 
+                        2) methodology for quantifying model uncertainty of the inferred information over unobserved areas, 3) an active training 
+                        procedure for the semantic map predictor, and 4) objectives for multiple navigation tasks based on the map prediction and uncertainty.                         
+                    </p>
+                </div>
+        
+
+        <!-- Paper section -->
+        <div>
+            <hr>
+            <div class="row text-center">
+                <div class="col">
+                    <p class="h2">Papers</p>
+                </div>
+            </div>
+
+            <!-- Paper 1 -->
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center col-sm-3">
+                    <div class="row mt-4">
+                        <a href="" style="max-width:200px; margin-left:auto; margin-right:auto">
+                            <img src="figures/iclr_paper.png" alt="paper-snapshot" class="img-thumbnail" style="box-shadow: 10px 10px 5px grey;" width="80%">
+                        </a>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <a class="h5" href="https://arxiv.org/abs/2106.15648" style="margin-right:10px">
+                                <span>[Arxiv]</span>
+                            </a>
+                            <a class="h5" href="https://arxiv.org/pdf/2106.15648.pdf" style="margin-right:10px">
+                                <span>[PDF]</span>
+                            </a>
+                            </a>
+                            <a class="h5" href="https://github.com/ggeorgak11/L2M" style="margin-right:10px">
+                                <span>[Code]</span>
+                            </a>
+                            <a class="h5" href="georgakis2022l2m.bib" target="_blank">
+                                <span>[Bibtex]</span>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                      <p class="h4 font-weight-bold ">Learning to Map for Active Semantic Goal Navigation, ICLR 2022</p>
+                        <p> 
+                        We consider the problem of object goal navigation in unseen environments. 
+                        Solving this problem requires learning of contextual semantic priors, a 
+                        challenging endeavour given the spatial and semantic variability of indoor 
+                        environments. Current methods learn to implicitly encode these priors through 
+                        goal-oriented navigation policy functions operating on spatial representations 
+                        that are limited to the agent's observable areas. In this work, we propose a novel 
+                        framework that actively learns to generate semantic maps outside the field of view 
+                        of the agent and leverages the uncertainty over the semantic classes in the 
+                        unobserved areas to decide on long term goals. We demonstrate that through this 
+                        spatial prediction strategy, we are able to learn semantic priors in scenes that 
+                        can be leveraged in unknown environments. Additionally, we show how different 
+                        objectives can be defined by balancing exploration with exploitation during searching 
+                        for semantic targets. Our method is validated in the visually realistic environments 
+                        of the Matterport3D dataset and show improved results on object goal navigation over 
+                        competitive baselines.
+                        </p>
+                </div>
+            </div>
+
+            <!-- Paper 2 -->
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-12 text-center col-sm-3">
+                    <div class="row mt-4">
+                        <a href="" style="max-width:200px; margin-left:auto; margin-right:auto">
+                            <img src="figures/icra_paper.png" alt="paper-snapshot" class="img-thumbnail" style="box-shadow: 10px 10px 5px grey;" width="80%">
+                        </a>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <a class="h5" href="https://arxiv.org/abs/2202.11907" style="margin-right:10px">
+                                <span>[Arxiv]</span>
+                            </a>
+                            <a class="h5" href="https://arxiv.org/pdf/2202.11907.pdf" style="margin-right:10px">
+                                <span>[PDF]</span>
+                            </a>
+                            </a>
+                            <a class="h5" href="https://github.com/ggeorgak11/UPEN" style="margin-right:10px">
+                                <span>[Code]</span>
+                            </a>
+                            <a class="h5" href="georgakis2022upen.bib" target="_blank">
+                                <span>[Bibtex]</span>
+                            </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                      <p class="h4 font-weight-bold ">Uncertainty-driven Planner for Exploration and Navigation, ICRA 2022</p>
+                        <p> 
+                        We consider the problems of exploration and point-goal navigation in previously unseen environments, 
+                        where the spatial complexity of indoor scenes and partial observability constitute these tasks challenging. 
+                        We argue that learning occupancy priors over indoor maps provides significant advantages towards addressing 
+                        these problems. To this end, we present a novel planning framework that first learns to generate occupancy maps 
+                        beyond the field-of-view of the agent, and second leverages the model uncertainty over the generated areas to 
+                        formulate path selection policies for each task of interest. For point-goal navigation the policy chooses paths
+                        with an upper confidence bound policy for efficient and traversable paths, while for exploration the policy 
+                        maximizes model uncertainty over candidate paths. We perform experiments in the visually realistic environments 
+                        of Matterport3D using the Habitat simulator and demonstrate: 1) Improved results on exploration and map quality 
+                        metrics over competitive methods, and 2) The effectiveness of our planning module when paired with the state-of-the-art 
+                        DD-PPO method for the point-goal navigation task.
+                        </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        <!-- Results, transformation -->
+        <div>
+            <hr>
+            <div class="row text-center">
+                <div class="col">
+                    <p class="h2">Architecture</p>
+			<div>
+      	    			<img src="figures/map_predictor3.png" width="100%">
+        		</div>
+                    	<div class="text-left">
+                            Overview of our semantic map predictor approach for a single time-step. 
+                            The model predicts the top-down egocentric semantics of unobserved areas 
+                            in a two-step procedure. First, the occupancy is predicted, 
+                            which is concatenated with a ground-projected semantic segmentation of the 
+                            RGB observation before producing the final output. Note that our 
+                            model learns to predict semantically plausible maps (i.e. chairs surrounding a table) 
+                            as shown in this example.
+                	</div>
+        	</div>
+       	    </div>
+               <hr>
+               <div class="row text-center">
+                   <div class="col">
+                       <p class="h2">Active Training</p>
+                   </div>
+               </div>
+
+               <div class="row text-center">
+                <div>
+			<div>
+      	    			<img src="figures/qualitative_map_models_iclr.png" width="70%">
+        		</div>
+                    	<div class="text-center">
+                        We realize our model as an ensemble of semantic map predictors. We employ an active training strategy that formulates an
+                        information gain objective based on the variance across model predictions. In practice, during training data collection
+                        we sample map locations for which the disagreement between the models is high. Here we show qualitative semantic predictions 
+                        from the individual models in the ensemble (first four columns).
+                	</div>
+                </div>
+            </div>
+
+            <hr>
+            <div class="row text-center">
+                <div class="col">
+                    <p class="h2">Planners for exploration and point-goal navigation tasks</p>
+                </div>
+            </div>
+
+            <div class="row text-center">
+             <div>
+         <div>
+                       <img src="figures/system_policy.png" width="80%">
+             </div>
+                     <div class="text-center">
+                        Examples of path selections for exploration (top row) and point-goal navigation (bottom-row) tasks. 
+                        Given the model uncertainty and occupancy probabilities we first generate a set of paths which are 
+                        evaluated either with an exploration objective or an upper confidence bound objective. 
+                        The agent position is denoted as a dark green dot, the goal is shown as magenta, and red dots signify short-term goals.
+                 </div>
+             </div>
+         </div>
+
+
+
+         <hr>
+         <div class="row text-center">
+             <div class="col">
+                 <p class="h2">Object-goal examples</p>
+             </div>
+         </div>
+
+         <div class="row text-center">
+             <div>
+         <div>
+                    <a><video width=80% src="figures/L2M_video.mp4", type="video/mp4" autoplay muted loop controls></video></a>	
+                 <!--  <img src="figures/navigation3_supplemental.png" width="80%"> -->
+             </div>
+                     <div class="text-center">
+             Top: RGB observations of the agent, input ground-projected map (egocentric), predicted semantic map (egocentric). 
+             Bottom: global semantic map and agent trajectory (long-term goals are shown as magenta circles), model uncertainty over semantic target, colors
+             for semantic labels in the map.
+                 </div>
+             </div>
+         </div>
+
+
+
+         <hr>
+         <div class="row text-center">
+             <div class="col">
+                 <p class="h2">Exploration and point-goal examples</p>
+             </div>
+         </div>
+
+         <div class="text-center">
+                <a><video width=80% src="figures/UPEN_video.mp4", type="video/mp4" autoplay muted loop controls></video></a>	
+         </div>
+            
+            <br>
+            
+
+        <!-- Ack -->
+        <div>
+            <hr>
+
+            <div class="row mb-5 text-center">
+                <div class="col">
+                    <p class="h2">Acknowledgements</p>
+		    <div class="text-left">
+		    <p> We would like to thank Samuel Xu for implementation support in evaluating baseline methods. 
+                Research was sponsored by the Honda Research Institute through the Curious Minded Machines project, 
+                by the Army Research Office under Grant Number W911NF-20-1-0080 and by the National Science Foundation 
+                under grants NSF CPS 2038873, NSF IIS 1703319, and NSF MRI 1626008. Further support was provided by the following grants:
+                NSF TRIPODS 1934960, ARL DCIST CRA W911NF-17-2-0181, ONR N00014-17-1-2093, the DARPA-SRC C-BRIC, 
+                CAREER award ECCS-2045834, and a Google Research Scholar award.
+                The views and conclusions contained in this document are those of the authors and should not be interpreted as 
+                representing the official policies, either expressed or implied, of the Army Research Office or the U.S. Government. 
+                The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any 
+                copyright notation herein. 
+
+		    </p><p>The design of this project page was based on <a href="https://www.guandaoyang.com/PointFlow/">this</a> website.
+		    </p></div>
+                </div>
+            </div>
+        </div>
+    
+
+</body></html>
